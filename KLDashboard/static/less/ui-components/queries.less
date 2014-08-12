@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    SMARTPHONE
+\*------------------------------------
+@media only screen and (min-width:@portable-start) and (max-width:@tablet-start){
+    .device-type(~"portable-");
+    .contenedor{
+	width:100%;}
+    .boton{
+	padding:6px 5px;}
+    .nav-link{
+	text-indent:-9999px;}
+    .sub-links{
+	padding-left:20px;
+	& a{
+	    font-size:8px;}}
+    .nav-icon{
+	left:inherit;
+	margin: 0 auto;
+	position:relative;}
+    .nav-section:target{
+	height:230px;}
+}*/
+/*------------------------------------*\
+    TABLET
+\*------------------------------------
+@media only screen and (min-width:@tablet-start) and (max-width:@desk-start){
+    .device-type(~"tablet-");
+    .contenedor{
+	width:100%;}
+    .nav-link{
+	padding: 19px 0;
+	font-size:16px;}
+}*/
+/*------------------------------------*\
+    DESKTOP
+\*------------------------------------
+@media only screen and (min-width:@desk-start){
+    .device-type(~"desk-");
+}
+*/
+.device-type(~"desk-");

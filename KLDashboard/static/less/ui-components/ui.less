@@ -1,0 +1,414 @@
+.hide{
+    display:none !important;}
+.centrado{
+    margin:0 auto;}
+.img-centrada{
+    display:block;
+    margin:0 auto;}
+.right{
+    float:right;}
+.verde{
+    color:@verde;}
+.texto-derecha{
+    text-align:right;}
+.trans{
+    .opacity(0.5);}
+.line-right{
+    border-right:solid 1px fade(@blanco,20%);}
+.icon{
+    top:50%;
+    left:50%;
+    display:block;
+    position:absolute;;
+    background:@sprite-ui;
+    &.right{
+        left:auto;
+        right:0;}
+    &.left{
+        left:0;
+        right:auto;}
+    &.home{
+        width:20px;
+        height:20px;
+        margin-left:-10px;
+        position:relative;
+        background-position:0 -105px;
+        &.verde{
+            width:32px;
+            height:32px;
+            background-position:-144px -325px;}}
+    &.up-arrow{
+        width:15px;
+        height:8px;
+        right:20px;
+        top:20px;
+        background-position:-61px -221px;}
+    &.down-arrow{
+        top:15px;
+        width:15px;
+        height:8px;
+        right:20px;
+        background-position:-61px -234px;}
+    &.vacacion{
+        width:20px;
+        height:20px;
+        margin-left:-10px;
+        position:relative;
+        background-position:-31px -107px;
+        &.verde{
+            width:32px;
+            height:32px;
+            background-position:-67px -325px;}}
+    &.imprevisto{
+        width:20px;
+        height:20px;
+        margin-left:-10px;
+        position:relative;
+        background-position:-29px -77px;
+        &.verde{
+            width:32px;
+            height:32px;
+            background-position:-106px -325px;}}
+    &.error{
+        top:50%;
+        width:22px;
+        height:22px;
+        position:absolute;
+        background-position: 2px -251px;}
+    &.deploy-error{
+        left:auto;
+        width:135px;
+        height:119px;
+        margin: 0 auto;
+        position:relative;
+        background-position:-5px -586px;}
+    &.deploy-exito{
+        left:auto;
+        width:118px;
+        height:118px;
+        margin: 0 auto;
+        position:relative;
+        background-position:-4px -456px;}
+    &.correcto{
+        top:50%;
+        width:22px;
+        height:22px;
+        position:absolute;
+        background-position: -29px -251px;}
+    &.search{
+        width:25px;
+        height:25px;
+        position:absolute;
+        background-position: -121px -272px;}
+    &.palomita{
+        top:0;
+        left:70%;
+        width:11px;
+        height:11px;
+        position:absolute;
+        background-position: -189px -286px;}
+    &.vacaciones{
+	width:19px;
+	height:19px;
+	margin-left:-10px;
+	background-position:-152px -246px;}
+    &.lap-top{
+	width:30px;
+	height:22px;
+	margin-left:-11px;
+	background-position:-200px -168px;
+        &.full{
+            top:0;
+            width:74px;
+            height:64px;
+            position:relative;
+            margin-left:-36px;
+            background-position:-189px -325px;}}
+    &.seguro{
+	width:30px;
+	height:21px;
+	margin-left:-15px;
+	background-position:-233px -171px;
+        &.full{
+            top:0;
+            width:92px;
+            height:63px;
+            position:relative;
+            margin-left:-46px;
+            background-position:-282px -325px;}}
+    &.gym{
+	width:30px;
+	height:16px;
+	margin-left:-14px;
+	background-position:-270px -176px;
+        &.full{
+            top:0;
+            width:92px;
+            height:51px;
+            margin-left:-46px;
+            position:relative;
+            background-position:-174px -409px;}}
+    &.curso{
+	width:30px;
+	height:17px;
+	margin-left:-14px;
+	background-position:-307px -175px;
+        &.full{
+            top:0;
+            width:82px;
+            height:51px;
+            margin-left:-41px;
+            position:relative;
+            background-position:-182px -480px;}}
+    &.estacionamiento{
+	width:30px;
+	height:18px;
+	margin-left:-14px;
+	background-position:-340px -174px;
+        &.full{
+            top:0;
+            width:81px;
+            height:53px;
+            margin-left:-40px;
+            position:relative;
+            background-position:-282px -407px;}}
+    &.si{
+	width:20px;
+	height:20px;
+	margin-left:-10px;
+	background-position:-169px -169px;
+        &.activo{
+            background-position:-29px -252px;}}
+    &.no{
+	width:20px;
+	height:20px;
+	margin-left:-10px;
+	background-position:0 -252px;
+        &.activo{
+            background-position:-146px -170px;}}
+    &.paloma{
+        top:10px;
+        left:auto;
+        right:40px;
+        width:27px;
+        height:28px;
+        position:absolute;
+        background-position: -82px -221px;}}
+.notificacion{
+    padding:5px 8px;
+    color:@blanco;
+    text-indent:0;
+    font-style: normal;
+    text-align:center;
+    font-size:12px;
+    .redondeado(15px);
+    margin-left:20px;
+    display:inline-block;
+    position:absolute;
+    background-color:@rojo;}
+.fecha{
+    color:@blanco;
+    font-size:12px;}
+.texto-centrado{
+    text-align:center;}
+ul{
+    .reset();
+    list-style:none;
+    &.inline{
+	& li{
+	float:left;}}
+    &.dots{
+        padding-left:5px;
+        list-style-type: disc;
+        list-style-position: outside;
+        & li{
+            margin:5px 0;}}}
+.indicador-circular{
+    width:140px;
+    height:118px;
+    margin:10px auto;
+    position:relative;
+    background:@sprite-ui;
+    background-position: -73px -1px;
+    & .icon{
+	top:50%;
+	left:50%;
+	display:block;
+	position:absolute;
+	background:@sprite-ui;
+	&.icon-home{
+	    width:46px;
+	    height:41px;
+	    margin:-26px 0 0 -23px;
+	    background-position:-2px -302px;}
+	&.icon-vacaciones{
+	    width:40px;
+	    height:40px;
+	    margin: -23px 0 0 -19px;
+            background-position: -5px -356px;}
+	&.icon-imprevistos{
+	    width:41px;
+	    height:41px;
+	    margin:-16px 0 0 -20px;
+	    background-position:-60px -377px;}}}
+.slider {
+    & ul{
+        width:90%;
+        margin:10px auto;}
+    & .boton{
+        margin-bottom:20px;
+        padding:7px 30px;}
+    & .bx-viewport{
+        min-height:240px;}
+    & .slide{
+        & img{
+            margin:0 auto 10px;
+            display:block;}}}
+
+.historial{
+    width:100%;
+    display:block;
+    & thead, & tbody{
+        width:100%;
+        display:block;
+        text-align:center;}
+    & tr{
+        width:100%;
+        display:block;
+        padding:10px 0;
+        border-bottom:solid 1px fade(@blanco,20%);}
+    & th, & td{
+        width:19.5%;
+        display:inline-block;}
+    &.admin th, &.admin td{
+        width:15%;
+        display:inline-block;}}
+.notificaciones{
+    width:100%;
+    display:block;
+    & thead, & tbody{
+        width:100%;
+        display:block;
+        text-align:center;}
+    & tr{
+        width:100%;
+        display:block;
+        padding:10px 0;
+        position:relative;
+        border-bottom:solid 1px fade(@blanco,20%);}
+    & th, & td{
+        width:24.5%;
+        position:relative;
+        display:inline-block;}
+    &.admin th, &.admin td{
+        width:15%;
+        display:inline-block;}}
+label{
+    position:relative;
+    display:block;
+    margin-bottom:10px;
+    &.inline{
+        font-size:14px;
+        text-indent: 20px;
+        margin-bottom:10px;
+        display:inline-block;
+        & input[type="radio"]{
+            left: 0;
+            top: 0;
+            margin: 3px 0;
+            position: absolute;}}}
+input{
+    border:none;
+    color:@blanco;
+    margin-top:10px;
+    margin-bottom:20px;
+    background:fade(@blanco,40%);
+    &[type="text"]{
+        .placeholder(@blanco);
+        display:block;
+        text-indent:5px;
+        width:90%;
+        height:30px;
+        &.buscador{
+            width:100%;}}
+    &[type="file"]{
+    visibility: hidden;
+    width: 0;
+    height: 0;}}
+textarea{
+    color:@blanco;
+    resize:none;
+    text-indent:5px;
+    min-width:300px;
+    height:110px;
+    background:fade(@blanco,40%);}
+select{
+    border: 0;
+    width:100%;
+    height: 30px;
+    color:@blanco;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 0;
+    background: transparent;
+    padding: 5px 30px 5px 5px;
+    -webkit-appearance: none;
+    & option{
+        color:@gris-claro;}}
+.selector{
+   height: 30px;
+   overflow: hidden;
+   margin-right:15px;
+   margin-bottom:10px;
+   background:fade(@blanco,40%) url(../img/select.png) 90% center no-repeat;
+    &.small{
+        width:70px;}
+    &.medium{
+        width:100px;}
+    &.full{
+        width:100%;}
+    &.last{
+        margin-right:0;}}
+.deploy-confirmacion{
+    margin-top:80px;}
+.v-line{
+    width:1px;
+    height:15px;
+    margin:0 5px;
+    position:relative;
+    display:inline-block;
+    background:@gris-azul;}
+.opcion{
+    color:fade(@blanco,20%);
+    &:hover,
+    &.activate{
+        color:@blanco;}}
+.buscador{
+    width:100%;
+    color:@gris;
+    margin:20px 0;
+    position:relative;
+    & .icon{
+        top:5px;
+        left:auto;
+        right:5px;
+        border:none;
+        position:absolute;}}
+.nomina{
+    width:100%;
+    display:block;
+    & thead, & tbody{
+        width:100%;
+        display:block;
+        text-align:center;}
+    & tr{
+        width:100%;
+        display:block;
+        padding:10px 0;
+        &.division{
+            border-bottom:solid 1px fade(@blanco,20%);}}
+    & th, & td{
+        width:32.5%;
+        display:inline-block;}}
+.nomina-img{
+    margin-top:30px;}

@@ -1,0 +1,39 @@
+.box(){
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;         
+}
+.reset(){
+    margin:0;
+    padding:0;
+    background:none;
+}
+.opacity (@opacity) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+.redondeado (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.show(@bloque:block){
+    display:@bloque;
+}
+.full-bck(@image){
+    background: url("@{image}") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.placeholder(@color){
+    ::-webkit-input-placeholder {color:@color;}
+    :-moz-placeholder {color:@color;}
+    ::-moz-placeholder {color:@color;}
+    :-ms-input-placeholder {color:@color;}
+}

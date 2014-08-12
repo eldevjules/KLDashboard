@@ -1,0 +1,378 @@
+/**
+* Contenedores
+**/
+html{
+     color:@blanco;
+     .full-bck("../img/background.jpg");}
+.contenido{
+    padding-left:20px;}
+.bloque{
+    padding:15px;
+    margin-bottom:30px;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    &.inline{
+        margin:5px 0 20px;;
+        padding:10px;}}
+.box{
+    height:300px;
+    overflow:hidden;
+    background:fade(@boxColor,20%);
+    margin-bottom:20px;
+    &.full-box{
+        height:inherit;
+        min-height:inherit;}
+    &.full-height{
+        height:610px;
+        & .box-body{
+            max-height:565px;}}
+    &.ausencias{
+        height:400px;
+        & .box-body{
+            max-height:390px;}}
+    &.nomina{
+        height:520px;
+        & .box-body{
+            max-height:470px;}}}
+.box-left{
+    float:left;}
+.box-right{
+    float:right;}
+.box-header{
+    height:50px;
+    overflow:hidden;
+    position:relative;
+    background:fade(@boxColor,50%);
+    & h3{
+	float:left;
+	margin-top:12px;
+	display:inline-block;}
+    & .selector{
+        right:0;
+        top:10px;
+        position:absolute;}}
+.icon-cat{
+    float:left;
+    width:50px;
+    height:50px;
+    display:block;
+    position:relative;
+    margin-right:20px;
+    border-right: solid 1px fade(@blanco,20%);
+    &.right{
+        float:none;
+        float:right;
+        border-right:none;
+        border-left: solid 1px fade(@blanco,20%);}}
+.box-icon{
+    top:50%;
+    left:50%;
+    display:block;
+    position:absolute;;
+    background:@sprite-ui;
+    &.ausencias{
+	width:20px;
+	height:18px;
+	margin-top:-9px;
+	margin-left:-11px;
+	background-position:-30px 0;}
+    &.home{
+	width:20px;
+	height:20px;
+	margin-top:-10px;
+	margin-left:-10px;
+	background-position: 2px -105px;}
+    &.vacacion{
+	width:20px;
+	height:20px;
+	margin-top:-10px;
+	margin-left:-10px;
+	background-position:-160px -282px;}
+    &.imprevisto{
+	width:22px;
+	height:20px;
+	margin-top:-10px;
+	margin-left:-11px;
+	background-position:-30px -78px;}
+    &.equipo{
+	width:29px;
+	height:16px;
+	margin-top:-8px;
+	margin-left:-15px;
+	background-position:0 -49px;}
+    &.historial{
+	width:22px;
+	height:22px;
+	margin-top:-11px;
+	margin-left:-12px;
+	background-position:0 -76px;}
+    &.admin{
+	width:20px;
+	height:20px;
+	margin-top:-10px;
+	margin-left:-10px;
+	background-position:-32px -49px;}
+    &.noticias{
+        width:20px;
+        height:18px;
+        margin-top:-9px;
+        margin-left:-10px;
+        background-position:0 0;}
+    &.notificaciones{
+        width:17px;
+        height:18px;
+        margin-top:-9px;
+        margin-left:-9px;
+        background-position:-121px -228px;}
+    &.directorio{
+        width:22px;
+        height:22px;
+        margin-top:-11px;
+        margin-left:-11px;
+        background-position:0 -24px;}
+    &.deploy{
+        width:18px;
+        height:22px;
+        margin-top:-11px;
+        margin-left:-9px;
+        background-position:-36px -170px;}
+    &.proyectos{
+        width:22px;
+        height:22px;
+        margin-top:-11px;
+        margin-left:-11px;
+        background-position:-4px -170px;}
+    &.paquetes{
+        width:35px;
+        height:26px;
+        margin-top:-16px;
+        margin-left:-15px;
+        background-position:-36px -132px;}
+    &.grafica{
+        width:24px;
+        height:22px;
+        margin-top:-12px;
+        margin-left:-11px;
+        background-position:-57px -97px;}
+    &.reglas{
+        width:19px;
+        height:13px;
+        margin-top:-6px;
+        margin-left:-12px;
+        background-position:-149px -382px;}
+     &.nomina{
+        width:23px;
+        height:20px;
+        margin-top:-10px;
+        margin-left:-11px;
+        background-position:-112px -170px;}
+    &.informacion{
+        width:18px;
+        height:18px;
+        margin-top:-9px;
+        margin-left:-9px;
+        background-position:-189px -249px;}
+    &.sueldo{
+        width:20px;
+        height:16px;
+        margin-top:-8px;
+        margin-left:-8px;
+        background-position:-213px -250px;}
+    &.prestaciones{
+        width:18px;
+        height:18px;
+        margin-top:-9px;
+        margin-left:-9px;
+        background-position:-244px -250px;}
+    &.grafica{
+        width:18px;
+        height:18px;
+        margin-top:-9px;
+        margin-left:-9px;
+        background-position:-271px -250px;}
+    &.mas{
+        width:18px;
+        height:18px;
+        margin-top:-9px;
+        margin-left:-9px;
+        background-position:-75px -160px;}}
+
+ .box-body{
+     max-height:245px;
+     overflow:auto;}
+.full-box .box-body{
+    max-height:inherit;}
+.servidores-list,
+.proyectos-list{
+    .reset();
+    width:100%;}
+.proyecto-item{
+        width:100%;
+        cursor:pointer;
+        padding:10px 0;
+        text-indent:20px;
+        font-weight:bold;
+        position:relative;
+        border-bottom:solid 2px @gris-azul;
+        background:fade(@boxColor,30%);
+        &:hover,
+        &.active{
+            background:fade(@boxColor,60%);}
+        &.active{
+            padding:10px 0 0;}}
+.proyectos-list{
+    background:fade(@blanco,20%);
+    & li{
+        margin-top:10px;
+        padding:20px 0;
+        font-weight:normal;
+        &:hover,
+        &.active{
+            background:fade(@boxColor,40%);}}}
+.deploy-error,
+.deploy-exito,
+.deploy-loading{
+    .texto-centrado;
+    margin-bottom:0;
+    margin-top:20px;}
+.deploy-loading{
+    & .indicador-circular{
+        margin-bottom:0;}
+    & h3{
+        margin-top:0;}}
+.paquetes-lista{}
+.paquete-item{
+    padding:10px 0;
+    text-indent:20px;
+    position:relative;
+    border-bottom:solid 2px @gris-azul;
+    & .boton{
+        top:10px;
+        right:10px;
+        position:absolute;
+        &.proceso{
+            font-weight:bold;
+            color:@verde;}}}
+.deploy-proyectos.full-box{
+    height:522px;}
+.grafica-box{
+    margin-bottom:2px;
+    & .bloque{
+        margin-bottom:0;}}
+.grafica-bloque{
+    height:200px;
+    overflow:hidden;
+    padding-top:40px;
+    text-align:center;
+    background:fade(@boxColor,20%);
+    margin-bottom:20px;
+    & .porcentaje{
+        color:@verde;
+        font-weight:bold;
+        font-size:70px;}}
+.directorio-buscador{
+    & p{
+        padding-top:5px;
+        margin-right:10px;}}
+.directorio-list{
+    & .departamento{
+        color:@verde;
+        text-transform:uppercase;}
+    & .puesto{
+        color:@verde;}
+    & li{
+        margin:10px 0;
+        position:relative;
+        & .icon{
+            top:0;
+            left:65%;
+            position:absolute;}}}
+.junta{
+    .box();
+    top:0;
+    left:50%;
+    width:115px;
+    height:114px;
+    margin-bottom:3px;
+    margin-left:-59px;
+    position:relative;
+    text-align:center;
+    font-weight:bold;
+    background:@sprite-ui;
+    padding-top:50px;
+    background-position:-212px 0;}
+.kamikazes-lista{
+    margin:10px 0;
+    & .area{
+        margin:15px 0;
+        padding:5px 0;
+        font-weight:bold;}}
+.miembros{
+    & li{
+        padding:5px 0;
+        font-weight:normal;}}
+.pasos{
+    margin:15px 0;}
+.ausencia-fecha{
+    width:300px;
+    margin:0 auto;}
+.resumen{
+    padding-top:3px;
+    text-align:right;
+    position:relative;
+    & i.icon{
+        left:35px;}}
+.reglas{
+    padding-left:40px;}
+.regla{
+    padding-top:3px;
+    position:relative;
+    text-indent:30px;
+    & i.icon{
+        top:0;
+        left:0;
+        position:absolute;}}
+.reglas-lista{
+    & li{
+        margin:10px 0;}}
+.sueldo{
+    & label{
+        padding-top:7px;
+        margin-right:10px;}
+    & input[type="text"]{
+        width:70px;}}
+.prestaciones-lista{
+    width:100%;
+    & .prestacion{
+        width:100%;
+        height:30px;
+        margin:10px 0;
+        position:relative;
+        & .icon{
+            top:0;
+            float:left;
+            left:auto;
+            position:relative;
+            margin:0 10px;}}}
+.nomina-fecha{
+    & label{
+        padding-top:7px;
+        margin-right:10px;}
+    & .selector{
+        width:78px;}}
+.prestaciones-opcionales{
+    width:100%;
+    height:110px;
+    margin:50px 0 0;}
+.opcional{
+    float:left;
+    width:20%;
+    position:relative;
+    text-align:center;
+    .opacity(0.25);
+    & span{
+        margin-bottom:10px;}
+    &.active,
+    &:hover{
+        .opacity(1);}}

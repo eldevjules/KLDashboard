@@ -1,0 +1,91 @@
+.nav{
+    min-height:100%;
+    overflow:hidden;
+    .opacity(1);
+    padding-left:0;
+    background-color:@gris;
+    & .notificacion{
+	top:15px;
+	right:15px;}
+    & .active{
+	color:@blanco;}}
+.nav-section{
+    width:100%;
+    height:54px;
+    float:left;
+    overflow:hidden;
+    cursor:pointer;
+    -webkit-transition:height 0.3s ease-out;  
+    -moz-transition:height 0.3s ease-out;  
+    -o-transition:height 0.3s ease-out;  
+    transition:height 0.3s ease-out;
+    border-bottom:solid 1px fade(@blanco,20%);
+    & h2{
+	margin:0;
+	position:relative;
+	text-indent:60px;}
+    &:hover .nav-link{
+	color:#fff;}
+    &:target{
+	height:200px;}}
+.sub-links{
+    padding:10px 10px 10px 60px;
+    background:@gris-claro;
+    & a{
+	height:40px;
+	padding:5px 0;
+	display:block;
+	position:relative;
+	color:fade(@blanco,50%);
+	&:hover{
+	    color:#fff;}}}
+.nav-link{
+    display:block;
+    padding:14px 0;
+    text-decoration:none;
+    color:fade(@blanco,50%)}
+.sub-links .icon{
+    float: left;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 30px;}
+.nav-icon{
+    top:17px;
+    left:20px;
+    width:22px;
+    display:block;
+    position:absolute;
+    background:@sprite-nav;
+    &.dashboard{
+	height:20px;
+	background-position:0 0;}
+    &.directorio{
+	height:15px;
+	background-position:0 -27px;}
+    &.ausencias{
+	height:20px;
+	background-position:0 -51px;}
+    &.reclutamiento{
+	height:18px;
+	background-position:0 -76px;}
+    &.conocimiento{
+	height:22px;
+	background-position:0 -98px;}
+    &.evaluacion{
+	height:18px;
+	background-position:0 -126px;}
+    &.servidores{
+	height:18px;
+	background-position:0 -150px;}
+    &.fondo{
+	height:17px;
+	background-position:0 -176px;}}
+.hov {
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 54px;
+    position: absolute;
+    background: @verde;
+    transition: top 0.5s ease-in-out;}

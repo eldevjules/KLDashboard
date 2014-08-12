@@ -1,0 +1,19 @@
+/********** GENERAL **********/
+
+/* Tabla DIV */
+.contenedor-tabla{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.contenedor-fila{
+    display: table-row;
+    width: 100%;
+}
+.contenedor-columna{
+    display: table-cell;
+}
+.img-perfil{
+    height: 115px;
+    width: 115px;
+}

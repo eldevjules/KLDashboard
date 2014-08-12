@@ -1,0 +1,176 @@
+<seccion>
+    <div class="desk-one-whole portable-one-whole table-one-whole grid-item box full-height">
+
+        <div class="box-header">
+            <div class="span icon-cat"><i class="box-icon admin"></i></div>
+            <h3>Administrador Directorio</h3>
+        </div>
+
+        <!-- box-body -->
+        <div class="box-body">
+            <form name="userForm" ng-submit="submitUsuario()" class="forma" style="margin-left: 35px; margin-top: 15px; margin-bottom: 15px;">
+                <!-- contenedor-tabla -->
+                <div class="contenedor-tabla">
+                    <!-- contenedor-fila -->
+                    <div class="contenedor-fila">
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                            <label>Imagen*
+                                <input type="text" ng-model="usuario.avatar">
+                            </label>
+                            <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{usuario.avatar}]}">
+                            <!-- <button type="button" class="boton file">Seleccionar archivo</button> -->
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+
+                            <label>Nombre*
+                                <input type="text" ng-model="usuario.first_name" ng-maxlength="30" required class="form-input">
+                            </label>
+        
+                            <label>Apellido Materno*
+                                <input type="text" ng-model="usuario.maternal_last_name" required class="form-input">
+                            </label>
+
+                            <p>Sexo*</p>
+                            <label class="inline desk-one-third grid-item">Femenino
+                                <input type="radio" name="gender" ng-model="usuario.gender" value="F">
+                            </label>
+                            <label class="inline desk-one-third grid-item">Masculino
+                                <input type="radio" name="gender" ng-model="usuario.gender" value="M">
+                            </label>
+
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+
+                            <label>Apellido Paterno*
+                                <input type="text" ng-model="usuario.last_name" required class="form-input">
+                            </label>
+
+                            <label>Fecha de Nacimiento*</label>
+
+                            <div class="selector grid-item small">
+                                <select name="birth_day" ng-model="birth_day"
+                                    ng-options="d as d.label for d in days">
+                                </select>
+                            </div>
+                            <div class="selector grid-item medium">
+                                <select name="birth_month" ng-model="birth_month"
+                                    ng-options="m as m.label for m in months">
+                                </select>
+                            </div>
+                            <div class="selector medium">
+                                <select name="birth_year" ng-model="birth_year"
+                                    ng-options="y as y.label for y in years">
+                                </select>
+                            </div>
+
+                            <label>Twitter
+                                <input type="text" ng-model="usuario.twitter" class="form-input">
+                            </label>
+
+                            <label>Tel&eacute;fono*
+                                <input type="text" ng-model="usuario.phone" required class="form-input">
+                            </label>
+
+                        </div><!-- / contenedor-columna -->
+                    </div><!-- / contenedor-fila -->
+
+                    <!-- contenedor-fila -->
+                    <div class="contenedor-fila">
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+
+                            <label>Puesto*
+                                <input type="text" ng-model="usuario.job" required class="form-input">
+                            </label>
+
+                            <label>Correo*</label>
+                            <input type="email" ng-model="usuario.email" required class="form-input">
+
+                            <label>ID Kamikaze*
+                                <input type="text" ng-model="usuario.kamikaze_number" required class="form-input">
+                            </label>
+
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+
+                            <label>Area*
+                                <input type="text" ng-model="usuario.work_area" required class="form-input">
+                            </label>
+
+                            <label>Fecha de Ingreso*</label>
+                            <div class="selector grid-item small">
+                                <select name="entry_day" ng-model="entry_day"
+                                    ng-options="d as d.label for d in days">
+                                </select>
+                            </div>
+                            <div class="selector grid-item medium">
+                                <select name="entry_month" ng-model="entry_month"
+                                    ng-options="m as m.label for m in months">
+                                </select>
+                            </div>
+                            <div class="selector medium">
+                                <select name="entry_year" ng-model="entry_year"
+                                    ng-options="y as y.label for y in years">
+                                </select>
+                            </div>
+
+                            <p>Tiempo*</p>
+                            <label class="inline desk-one-third grid-item">Completo
+                                <input type="radio" name="job_time" ng-model="usuario.job_time" value="completo">
+                            </label>
+                            <label class="inline desk-one-third grid-item">Medio
+                                <input type="radio" name="job_time" ng-model="usuario.job_time" value="medio">
+                            </label>
+
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                            <label>Usuario*
+                                <input type="text" ng-model="usuario.username" required class="form-input">
+                            </label>
+
+                            <label>Jefe Directo*</label>
+                            <input type="email" ng-model="usuario.boss" required class="form-input">
+
+                            <p>Estado*</p>
+                            <label class="inline desk-one-third grid-item">Activo
+                                <input type="radio" name="is_active" ng-model="usuario.is_active" value="1">
+                            </label>
+                            <label class="inline desk-one-third grid-item">Inactivo
+                                <input type="radio" name="is_active" ng-model="usuario.is_active" value="0">
+                            </label>
+
+                        </div><!-- / contenedor-columna -->
+                    </div><!-- / contenedor-fila -->
+
+                    <!-- contenedor-fila -->
+                    <div class="contenedor-fila">
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                            <p> Campos requeridos * </p>
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                            <button type="button" ng-click="cancelarUsuario()" class="boton cancelar"> Cancelar </button>
+                            <button type="submit" class="submit boton"> Guardar </button>
+                        </div><!-- / contenedor-columna -->
+                    </div><!-- / contenedor-fila -->
+                </div><!-- / contenedor-tabla -->
+            </form>
+        </div><!-- / box-body -->
+    </div>
+</section>

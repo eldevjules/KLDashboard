@@ -1,0 +1,480 @@
+[
+    {
+    "model": "directorio.permission",
+        "pk": 1,
+        "fields": {
+            "denomination": "root",
+            "description": "Control total de la aplicacion."
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 2,
+        "fields": {
+            "denomination": "directorio_alta",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 3,
+        "fields": {
+            "denomination": "directorio_edicion",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 4,
+        "fields": {
+            "denomination": "directorio_admin",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 5,
+        "fields": {
+            "denomination": "direcotrio_consulta",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 6,
+        "fields": {
+            "denomination": "dojo_alta",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 7,
+        "fields": {
+            "denomination": "dojo_edicion",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 8,
+        "fields": {
+            "denomination": "dojo_admin",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 9,
+        "fields": {
+            "denomination": "dojo_consulta",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 10,
+        "fields": {
+            "denomination": "ausencias_eliminar",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 11,
+        "fields": {
+            "denomination": "ausencias_reporte",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 12,
+        "fields": {
+            "denomination": "ausencias_alta",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 13,
+        "fields": {
+            "denomination": "ausencias_aprobar",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 14,
+        "fields": {
+            "denomination": "ausencias_rechazar",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 15,
+        "fields": {
+            "denomination": "ausencias_cancelar",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 16,
+        "fields": {
+            "denomination": "ausencias_consulta",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 17,
+        "fields": {
+            "denomination": "ausencias_mi",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 18,
+        "fields": {
+            "denomination": "ausencias_historial",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 19,
+        "fields": {
+            "denomination": "ausencias_notificaciones",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 20,
+        "fields": {
+            "denomination": "ausencias_equipo",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 21,
+        "fields": {
+            "denomination": "ausencias_reglas",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 22,
+        "fields": {
+            "denomination": "ausencias_admin",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.permission",
+        "pk": 23,
+        "fields": {
+            "denomination": "ausencias_recepcion_avisos",
+            "description": ""
+        }
+    },
+    {
+    "model": "directorio.rol",
+        "pk": 1,
+        "fields": {
+            "denomination": "Kamikaze",
+            "description": "",
+            "status": "activo"
+        }
+    },
+    {
+    "model": "directorio.rol",
+        "pk": 2,
+        "fields": {
+            "denomination": "Administrador Directorio",
+            "description": "",
+            "status": "activo"
+        }
+    },
+    {
+    "model": "directorio.rol",
+        "pk": 3,
+        "fields": {
+            "denomination": "Administrador Dojos",
+            "description": "",
+            "status": "activo"
+        }
+    },
+    {
+    "model": "directorio.rol",
+        "pk": 4,
+        "fields": {
+            "denomination": "Administrador Ausencias",
+            "description": "",
+            "status": "activo"
+        }
+    },
+
+    {
+    "model": "directorio.person",
+        "pk": 1,
+        "fields": {
+            "names": "Super",
+            "paternal_surname": "Kamikaze",
+            "maternal_surname": "Admin",
+            "birth_date": "2009-01-01",
+            "gender": "masculino"
+        }
+    },
+
+
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 1,
+        "fields": {
+            "rol": 1,
+            "permission": 5
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 2,
+        "fields": {
+            "rol": 1,
+            "permission": 6
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 3,
+        "fields": {
+            "rol": 1,
+            "permission": 7
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 4,
+        "fields": {
+            "rol": 1,
+            "permission": 9
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 5,
+        "fields": {
+            "rol": 1,
+            "permission": 12
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 6,
+        "fields": {
+            "rol": 1,
+            "permission": 13
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 7,
+        "fields": {
+            "rol": 1,
+            "permission": 14
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 8,
+        "fields": {
+            "rol": 1,
+            "permission": 15
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 9,
+        "fields": {
+            "rol": 1,
+            "permission": 16
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 10,
+        "fields": {
+            "rol": 1,
+            "permission": 17
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 11,
+        "fields": {
+            "rol": 1,
+            "permission": 18
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 12,
+        "fields": {
+            "rol": 1,
+            "permission": 19
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 13,
+        "fields": {
+            "rol": 1,
+            "permission": 20
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 14,
+        "fields": {
+            "rol": 1,
+            "permission": 21
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 15,
+        "fields": {
+            "rol": 1,
+            "permission": 23
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 16,
+        "fields": {
+            "rol": 2,
+            "permission": 2
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 17,
+        "fields": {
+            "rol": 2,
+            "permission": 3
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 18,
+        "fields": {
+            "rol": 2,
+            "permission": 4
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 19,
+        "fields": {
+            "rol": 2,
+            "permission": 5
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 20,
+        "fields": {
+            "rol": 3,
+            "permission": 6
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 21,
+        "fields": {
+            "rol": 3,
+            "permission": 7
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 22,
+        "fields": {
+            "rol": 3,
+            "permission": 8
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 23,
+        "fields": {
+            "rol": 3,
+            "permission": 9
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 24,
+        "fields": {
+            "rol": 4,
+            "permission": 10
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 25,
+        "fields": {
+            "rol": 4,
+            "permission": 11
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 26,
+        "fields": {
+            "rol": 4,
+            "permission": 12
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 27,
+        "fields": {
+            "rol": 4,
+            "permission": 16
+        }
+    },
+    {
+    "model": "directorio.rol_permissions",
+        "pk": 28,
+        "fields": {
+            "rol": 4,
+            "permission": 22
+        }
+    },
+
+    {
+    "model": "directorio.person_permissions",
+        "pk": 1,
+        "fields": {
+            "person": 1,
+            "permission": 1
+        }
+    },
+
+    {
+    "model": "directorio.credential",
+        "pk": 28,
+        "fields": {
+            "person": 1,
+            "provider": "local",
+            "user": "kmkz",
+            "hashed_password": "kmkz2014"
+        }
+    }
+]
