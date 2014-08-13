@@ -17,18 +17,23 @@
 <body ng-controller="GeneralAngularController">
 
     <!-- Import Header Template -->
+    {% if user and not user.is_anonymous %}
     <div class="header">
       <div class="contenedor">
         <div class="grid-item desk-one-half"><a title="Kamikaze Dashboard" href="#" class="logotipo"><img src=" {%  static "images/logo.png" %} " alt="Kamikaze Lab"></a></div>
         <div class="grid-item desk-one-half">
+
           <div class="perfil">
-            <button class="boton">Cerrar sesión</button><img src="images/usuario.png" alt="Marcela Ramírez" class="icon">
+            <a href="{% url 'auth:logout' %}?next={{ request.path }}"><button class="boton">Cerrar sesión</button></a><img src="images/usuario.png" alt="{{ user.get_full_name|default:user.username }}" class="icon">
           </div>
+
         </div>
       </div>
     </div>
+    {% endif %}
 
     <!--NavBar-->
+    {% if user and not user.is_anonymous %}
     <div class="desk-one-fifth nav"><span class="hov"></span>
       <div id="dashboard" class="nav-section">
         <h2><i class="nav-icon dashboard"></i><a href="#dashboard" class="nav-link active">Dashboard<i class="notificacion">1</i></a></h2>
@@ -67,6 +72,7 @@
         <div class="sub-links"><a href="#fondo" title="Fondo del saber 1">Fondo del saber 1</a><a href="#fondo" title="Fondo del saber 2">Fondo del saber 2</a><a href="#fondo" title="Fondo del saber 3">Fondo del saber 3</a></div>
       </div>
     </div>
+    {% endif %}
 
 
     <div class="contenedor principal">

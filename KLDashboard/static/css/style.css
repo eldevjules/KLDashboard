@@ -1898,3 +1898,24 @@ a {
             height:auto;}}
 }
 */
+
+
+
+#boxLogin{
+  margin-left: 30%;
+  margin-top: 150px;
+}
+
+#boxLogin img{
+  margin-bottom:20px;
+}
+
+#boxLogin a img{
+  margin-left: 12px;
+}
+
+#mensageBienvenida{
+  text-align:center;
+  padding-top: 120px;
+  font-size: 30px;
+}

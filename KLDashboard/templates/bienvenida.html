@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <!-- <section ng-view /> -->
+
+    {% if user and not user.is_anonymous %}
+
+      <div id="mensageBienvenida">Hola {{ user.get_full_name|default:user.username }}.<br>Bienvenido al Dashboard Kamikaze!</div>
+
+    {% else %}
+
+      <div id="boxLogin">
+        <img src=" {%  static "images/logo.png" %} " alt="Kamikaze Lab">
+        <li>
+          <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">
+            <img width="200px" src=" {%  static "images/sign-in-with-google.png" %} " salt="Kamikaze Lab">
+          </a>
+        </li>
+      </div>
+    {% endif %}
+
+{% endblock content %}

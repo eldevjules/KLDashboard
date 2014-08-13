@@ -10,7 +10,8 @@ urlpatterns = patterns('',
 
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'directorio.views.home', name='home'),
+    url(r'^$', 'KLDashboard.views.bienvenida', name='home'),
+    url(r'^directorio/', include('directorio.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url('', include('django.contrib.auth.urls', namespace='auth')),
 )
