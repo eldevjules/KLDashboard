@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'KLDashboard.views.bienvenida', name='home'),
+    url(r'^proximamente/', 'KLDashboard.views.proximamente', name='proximamente'),
     url(r'^directorio/', include('directorio.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url('', include('django.contrib.auth.urls', namespace='auth')),

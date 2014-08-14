@@ -1642,11 +1642,12 @@ a {
   background: #49585f;
 }
 .sub-links a {
-  height: 40px;
+  height: 20px;
   padding: 5px 0;
   display: block;
   position: relative;
   color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 .sub-links a:hover {
   color: #fff;
@@ -1708,7 +1709,7 @@ a {
   top: 0;
   left: 0;
   width: 5px;
-  height: 54px;
+  height: 42px;
   position: absolute;
   background: #22c3aa;
   transition: top 0.5s ease-in-out;

@@ -7,3 +7,10 @@ def bienvenida(request):
                             'user': request.user})
    return render_to_response('bienvenida.html',
                              context_instance=context)
+
+def proximamente(request):
+  context = RequestContext(request,
+                          {'request': request,
+                           'user': request.user})
+  return render_to_response('proximamente.html',
+                            context_instance=context)
