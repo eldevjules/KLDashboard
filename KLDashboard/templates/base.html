@@ -36,12 +36,12 @@
     {% if user and not user.is_anonymous %}
     <div class="desk-one-fifth nav"><span class="hov"></span>
       <div id="dashboard" class="nav-section">
-        <h2><i class="nav-icon dashboard"></i><a href="#dashboard" class="nav-link active">Dashboard<i class="notificacion">1</i></a></h2>
+        <h2><i class="nav-icon dashboard"></i><a href="/" class="nav-link">Dashboard<i class="notificacion">1</i></a></h2>
         <div class="sub-links"><a href="#dashboard" title="Dashboard 1">Dashboard 1 </a><a href="#dashboard" title="Dashboard 2">Dashboard 2</a><a href="#dashboard" title="Dashboard 3">Dashboard 3</a></div>
       </div>
-      <div id="directorio" class="nav-section">
-        <h2><i class="nav-icon directorio"></i><a href="#" class="nav-link">Directorio</a></h2>
-        <div class="sub-links"><a href="#directorio" title="Directorio 1">Administrador</a></div>
+      <div id="directorio" class="nav-section" ng-class="{true: 'active', false: ''}[activeItem == 'directorio']">
+        <h2><i class="nav-icon directorio"></i><a href="/directorio" class="nav-link">Directorio</a></h2>
+        <div class="sub-links"><a href="#directorio" title="Administrador">Administrador</a></div>
       </div>
       <div id="ausencias" class="nav-section">
         <h2><i class="nav-icon ausencias"></i><a href="#ausencias" class="nav-link">Ausencias</a></h2>

@@ -2,16 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-# Modelo Telefono
-class Phone(models.Model):
-    number = models.CharField(max_length = 50)
-    label = models.CharField(max_length = 50)
-
-# Modelo Correo
-class Email(models.Model):
-    email = models.CharField(max_length = 100)
-    label = models.CharField(max_length = 50)
-
 # Modelo Permisos
 class Permission(models.Model):
     denomination = models.CharField(max_length = 100)
@@ -30,12 +20,6 @@ class Person(models.Model):
     birth_date = models.DateField()
     gender = models.CharField(max_length = 10)
 
-    # Telefonos
-    phones = models.ManyToManyField(Phone)
-
-    # Correos
-    emails = models.ManyToManyField(Email)
-
     # Permisos
     permissions = models.ManyToManyField(Permission)
 
@@ -53,7 +37,7 @@ class Rol(models.Model):
 
 # Modelo Perfil
 class Profile(models.Model):
-    person_id = models.ForeignKey(Person)
+    person = models.ForeignKey(Person)
     kamikaze_numbre = models.CharField(max_length = 10)
     company = models.CharField(max_length = 100)
     area = models.CharField(max_length = 100)
@@ -62,8 +46,9 @@ class Profile(models.Model):
     boss = models.CharField(max_length = 100)
     avatar = models.CharField(max_length = 100)
     admision_date = models.DateTimeField()
-    last_login = models.DateTimeField()
     twitter = models.CharField(max_length = 100)
+    email = models.CharField(max_length = 50)
+    phone = models.CharField(max_length = 50)
 
 # Modelo Credenciales
 class Credential(models.Model):

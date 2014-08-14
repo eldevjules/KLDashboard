@@ -64,7 +64,7 @@ DATABASES = {
         'ENGINE':'django.db.backends.mysql',
         'NAME': 'KLDashboard',
         'USER': 'root',
-        'PASSWORD': 'mseVerest76',
+        'PASSWORD': '',
         'HOST': 'localhost',
     }
 }
@@ -120,7 +120,25 @@ AUTHENTICATION_BACKENDS = (
    'django.contrib.auth.backends.ModelBackend',
 )
 
+SOCIAL_AUTH_PIPELINE = (
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    # 'directorio.pipelines.login.get_username',
+    'directorio.pipeline.login.create_user',
+
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details',
+
+    'directorio.pipeline.login.create_user_dashboard',
+)
+
+LOGIN_URL          = '/'
 LOGIN_REDIRECT_URL = '/'
+LOGIN_ERROR_URL    = '/'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '812817298722-s24p5adske09bcmkl3bnbjm4ntg4js3j.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'TGfksRgE7DjCFdcD4INOzi8b'

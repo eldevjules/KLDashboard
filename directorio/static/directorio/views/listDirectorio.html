@@ -1,40 +1,36 @@
 <div class="desk-one-whole grid-item box full-box directorio full-height">
-        <div class="box-body">
-            <a ng-href="#!/alta" class="boton">Nuevo Kamikaze</a>
-            <!-- Filtros -->
-            <div class="five-sixths right">
-                <div class="bloque directorio-buscador">
-                    <p class="grid-item">Area:</p>
-                    <div class="selector grid-item">
-                        <select name="filter_section" ng-model="filter_section"
-                            ng-options="fs as fs.label for fs in sections">
-                        </select>
-                    </div>
-                    <p class="grid-item">Puesto:</p>
-                    <div class="selector grid-item">
-                        <select name="filter_area" ng-model="filter_area"
-                            ng-options="fa as fa.label for fa in areas">
-                        </select>
-                    </div>
+    <div class="box-body">
+        <!-- Filtros -->
+        <div class="five-sixths right">
+            <div class="bloque directorio-buscador">
+                <p class="grid-item">Area:</p>
+                <div class="selector grid-item">
+                    <select name="filter_section" ng-model="filter_section"
+                        ng-options="fs as fs.label for fs in sections">
+                    </select>
                 </div>
-            </div><!-- / Filtros -->
+                <p class="grid-item">Puesto:</p>
+                <div class="selector grid-item">
+                    <select name="filter_area" ng-model="filter_area"
+                        ng-options="fa as fa.label for fa in areas">
+                    </select>
+                </div>
+            </div>
+        </div><!-- / Filtros -->
 
-            <!-- Grid -->
-            <div class="desk-one-whole">
-                <ul class="directorio-list">
-                    <li class="slide desk-one-quarter texto-centrado grid-item" ng-repeat="usuario in usuarios | filter:{ work_area: filter_section.value } | filter:{ job: filter_area.value }">
-                        <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{ usuario.avatar }]}" alt="{[{ usuario.first_name }]} {[{ usuario.last_name }]}">
-                        <p class="departamento"> {[{ usuario.work_area }]} </p>
-                        <p class="puesto"> {[{ usuario.job }]} </p>
-                        <p><strong> {[{ usuario.first_name }]} {[{ usuario.last_name }]} </strong></p>
-                        <p>{[{ usuario.email }]}</p>
-                        <p>{[{ usuario.twitter }]} | {[{ usuario.phone }]}</p>
-                        <p>Cumple: {[{ usuario.birth_date }]} | Entró: {[{ usuario.admission_date }]}</p>
-                        <a ng-href="#!/{[{ usuario.kamikaze_number }]}" class="boton">Editar</a>
-                    </li>
-                </ul>
-            </div><!-- / Grid -->
-
-            <div ui-view></div>
+        <!-- Grid -->
+        <div class="desk-one-whole">
+            <ul class="directorio-list">
+                <li class="slide desk-one-quarter texto-centrado grid-item" ng-repeat="usuario in usuarios | filter:{ work_area: filter_section.value } | filter:{ job: filter_area.value }">
+                    <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{ usuario.avatar }]}" alt="{[{ usuario.first_name }]} {[{ usuario.last_name }]}">
+                    <p class="departamento"> {[{ usuario.work_area }]} </p>
+                    <p class="puesto"> {[{ usuario.job }]} </p>
+                    <p><strong> {[{ usuario.first_name }]} {[{ usuario.last_name }]} </strong></p>
+                    <p>{[{ usuario.email }]}</p>
+                    <p>{[{ usuario.twitter }]} | {[{ usuario.phone }]}</p>
+                    <p>Cumple: {[{ usuario.birth_date }]} | Entró: {[{ usuario.admission_date }]}</p>
+                </li>
+            </ul>
+        </div><!-- / Grid -->
     </div>
 </div>

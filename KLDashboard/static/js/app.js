@@ -84,3 +84,19 @@ angular.module('KLDashboardClient.ausencias', []);
 angular.module('KLDashboardClient.directorio', []);
 angular.module('KLDashboardClient.dojos', []);
 angular.module('KLDashboardClient.servidores', []);
+
+// Configuracion de moment para toda la aplicacion
+
+moment.lang('es', {
+    months : [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+        "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ],
+    monthsMin : [
+        "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul",
+        "Ago", "Sep", "Oct", "Nov", "Dic"
+    ],
+    weekdaysMin : ["D", "L", "M", "M", "J", "V", "S"],
+    weekdays : ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+
+});

@@ -1,0 +1,56 @@
+<div class="desk-one-whole grid-item box full-height">
+    <!-- Header -->
+    <div class="box-header">
+        <div class="span icon-cat">
+            <i class="box-icon admin"></i>
+        </div>
+        <h3>Kamikazes</h3>
+    </div>
+    <!-- / Header -->
+
+    <!-- Filtros -->
+    <div>
+        <p class="grid-item">Encuentra a un kamikaze:</p>
+        <input type="text" ng-model="inputBuscaKamikaze">
+        <a ng-href="#!/alta" class="boton">Nuevo Kamikaze</a>
+    </div>
+    <!-- / Filtros -->
+
+    <!-- Grid -->
+    <div class="box-body">
+        <table class="historial">
+            <thead>
+                <tr>
+                    <th>Avatar</th>
+                    <th>Nombre</th>
+                    <th>Empresa</th>
+                    <th>Área</th>
+                    <th>Puesto</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="usuario in usuarios | filter:inputBuscaKamikaze">
+                    <td>
+                        <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{ usuario.avatar }]}" alt="{[{ usuario.first_name }]} {[{ usuario.last_name }]}">
+                    </td>
+                    <td>
+                        <p>{[{ usuario.first_name }]} {[{ usuario.last_name }]}</p>
+                    </td>
+                    <td> {[{ usuario.company }]} </td>
+                    <td>
+                        <p class="departamento"> {[{ usuario.work_area }]} </p>
+                    </td>
+                    <td>
+                        <p class="puesto"> {[{ usuario.job }]} </p>
+                    </td>
+                    <td>
+                        <a ng-href="#!/{[{ usuario.kamikaze_number }]}" class="boton">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- / Grid -->
+</div>
