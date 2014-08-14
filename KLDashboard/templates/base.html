@@ -35,41 +35,61 @@
     <!--NavBar-->
     {% if user and not user.is_anonymous %}
     <div class="desk-one-fifth nav"><span class="hov"></span>
+
       <div id="dashboard" class="nav-section">
-        <h2><i class="nav-icon dashboard"></i><a href="#dashboard" class="nav-link active">Dashboard<i class="notificacion">1</i></a></h2>
-        <div class="sub-links"><a href="#dashboard" title="Dashboard 1">Dashboard 1 </a><a href="#dashboard" title="Dashboard 2">Dashboard 2</a><a href="#dashboard" title="Dashboard 3">Dashboard 3</a></div>
+        <h2><i class="nav-icon dashboard"></i><a href="/" class="nav-link">Dashboard<i class="notificacion">1</i></a></h2>
       </div>
       <div id="directorio" class="nav-section">
-        <h2><i class="nav-icon directorio"></i><a href="#" class="nav-link">Directorio</a></h2>
-        <div class="sub-links"><a href="#directorio" title="Directorio 1">Administrador</a></div>
+         <h2><i class="nav-icon directorio"></i><a href="" class="nav-link">Directorio</a></h2>
+         <div class="sub-links">
+           <a href="/directorio/#!/lista" title="Administrador">Listado</a>
+           <a href="/directorio/#!/admin" title="Administrador">Administrador</a>
+         </div>
       </div>
       <div id="ausencias" class="nav-section">
-        <h2><i class="nav-icon ausencias"></i><a href="#ausencias" class="nav-link">Ausencias</a></h2>
-        <div class="sub-links"><a href="#ausencias" title="Ausencias 1">Ausencias 1</a><a href="#ausencias" title="Ausencias 2">Ausencias 2</a><a href="#ausencias" title="Ausencias 3">Ausencias 3</a><a href="#ausencias" title="Ausencias 3">Ausencias 4</a></div>
+        <h2><i class="nav-icon ausencias"></i><a href="/proximamente" class="nav-link">Ausencias</a></h2>
+        <div class="sub-links">
+          <a href="/ausencias/#!/lista" title="Ausencias 1">Ausencias 1</a>
+          <a href="/ausencias/#!/lista" title="Ausencias 2">Ausencias 2</a>
+          <a href="/ausencias/#!/lista" title="Ausencias 3">Ausencias 3</a>
+          <a href="/ausencias/#!/lista" title="Ausencias 3">Ausencias 4</a>
+        </div>
       </div>
       <div id="dojos" class="nav-section">
-        <h2><i class="nav-icon conocimiento"></i><a href="#dojos" class="nav-link">Dojos</a></h2>
-        <div class="sub-links"><a href="#conocimiento" title="Conocimiento 1">Conocimiento 1</a><a href="#conocimiento" title="Conocimiento 2">Conocimiento 2</a><a href="#conocimiento" title="Conocimiento 3">Conocimiento 3</a></div>
+        <h2><i class="nav-icon conocimiento"></i><a href="/proximamente" class="nav-link">Dojos</a></h2>
+        <div class="sub-links">
+          <a href="/proximamente" title="Fondo del saber 1">Próximamente </a>
+        </div>
       </div>
       <div id="reclutamiento" class="nav-section">
-        <h2><i class="nav-icon reclutamiento"></i><a href="#reclutamiento" class="nav-link">Reclutamiento</a></h2>
-        <div class="sub-links"><a href="#reclutamiento" title="Reclutamiento 1">Reclutamiento 1</a><a href="#reclutamiento" title="Reclutamiento 2">Reclutamiento 2</a><a href="#reclutamiento" title="Reclutamiento 3">Reclutamiento 3</a><a href="#reclutamiento" title="Reclutamiento 1">Reclutamiento 4</a></div>
+        <h2><i class="nav-icon reclutamiento"></i><a href="/proximamente" class="nav-link">Reclutamiento</a></h2>
+        <div class="sub-links">
+          <a href="/proximamente" title="Fondo del saber 1">Próximamente </a>
+        </div>
       </div>
       <div id="conocimiento" class="nav-section">
-        <h2><i class="nav-icon conocimiento"></i><a href="#conocimiento" class="nav-link">Conocimiento</a></h2>
-        <div class="sub-links"><a href="#conocimiento" title="Conocimiento 1">Conocimiento 1</a><a href="#conocimiento" title="Conocimiento 2">Conocimiento 2</a><a href="#conocimiento" title="Conocimiento 3">Conocimiento 3</a></div>
+        <h2><i class="nav-icon conocimiento"></i><a href="/proximamente" class="nav-link">Conocimiento</a></h2>
+        <div class="sub-links">
+          <a href="/proximamente" title="Fondo del saber 1">Próximamente </a>
+        </div>
       </div>
       <div id="evaluacion" class="nav-section">
-        <h2><i class="nav-icon evaluacion"></i><a href="#evaluacion" class="nav-link">Evaluación</a></h2>
-        <div class="sub-links"><a href="#evaluacion" title="Evaluación 1">Evaluación 1</a><a href="#evaluacion" title="Evaluación 2">Evaluación 2</a><a href="#evaluacion" title="Evaluación 3">Evaluación 3</a></div>
+        <h2><i class="nav-icon evaluacion"></i><a href="/proximamente" class="nav-link">Evaluación</a></h2>
+        <div class="sub-links">
+          <a href="/proximamente" title="Fondo del saber 1">Próximamente </a>
+        </div>
       </div>
       <div id="servidores" class="nav-section">
-        <h2><i class="nav-icon servidores"></i><a href="#servidores" class="nav-link">Servidores</a></h2>
-        <div class="sub-links"><a href="#servidores" title="Servidores 1">Servidores 1</a><a href="#servidores" title="Servidores 2">Servidores 2</a><a href="#servidores" title="Servidores 3">Servidores 3</a></div>
+        <h2><i class="nav-icon servidores"></i><a href="/proximamente" class="nav-link">Servidores</a></h2>
+        <div class="sub-links">
+          <a href="/proximamente" title="Fondo del saber 1">Próximamente </a>
+        </div>
       </div>
       <div id="fondo" class="nav-section">
-        <h2><i class="nav-icon fondo"></i><a href="#fondo" class="nav-link">Fondo del saber</a></h2>
-        <div class="sub-links"><a href="#fondo" title="Fondo del saber 1">Fondo del saber 1</a><a href="#fondo" title="Fondo del saber 2">Fondo del saber 2</a><a href="#fondo" title="Fondo del saber 3">Fondo del saber 3</a></div>
+        <h2><i class="nav-icon fondo"></i><a href="/proximamente" class="nav-link">Fondo del saber</a></h2>
+        <div class="sub-links">
+          <a href="/proximamente" title="Fondo del saber 1">Próximamente </a>
+        </div>
       </div>
     </div>
     {% endif %}
