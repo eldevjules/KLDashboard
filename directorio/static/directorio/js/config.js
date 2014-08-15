@@ -6,11 +6,7 @@ angular.module('KLDashboardClient.directorio').config(['$stateProvider', '$urlRo
         $urlRouterProvider.when("", "/lista");
         $urlRouterProvider.when("/", "/lista");
         // For any unmatched url, send to /
-        // $urlRouterProvider.otherwise('/')
-        $urlRouterProvider.otherwise(function($injector, $location){
-            console.log( $location );
-            alert('hola');
-        });
+        $urlRouterProvider.otherwise('/')
 
         $stateProvider
         .state(
@@ -54,6 +50,7 @@ angular.module('KLDashboardClient.directorio').config(['$stateProvider', '$urlRo
                 controller: 'DirectorioEdicionAngularController'
             }
         );
+
     }
 ]);
 

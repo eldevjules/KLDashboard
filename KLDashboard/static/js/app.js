@@ -1,4 +1,4 @@
-var DashboardApp = angular.module('KLDashboardClient', ['ngRoute', 'ngCookies', 'ngResource', 'ui.router', 'KLDashboardClient.general', 'KLDashboardClient.ausencias', 'KLDashboardClient.directorio', 'KLDashboardClient.dojos', 'KLDashboardClient.servidores'], function($interpolateProvider) {
+var DashboardApp = angular.module('KLDashboardClient', ['ngRoute', 'ngCookies', 'ngResource', 'ui.router', 'KLDashboardClient.system', 'KLDashboardClient.general', 'KLDashboardClient.ausencias', 'KLDashboardClient.directorio', 'KLDashboardClient.dojos', 'KLDashboardClient.servidores'], function($interpolateProvider) {
 
     'use strict';
 
@@ -79,6 +79,7 @@ DashboardApp.run(function($rootScope, $http, $cookies, $state, $stateParams){
 });
 
 // Client Modules
+angular.module('KLDashboardClient.system', []);
 angular.module('KLDashboardClient.general', []);
 angular.module('KLDashboardClient.ausencias', []);
 angular.module('KLDashboardClient.directorio', []);

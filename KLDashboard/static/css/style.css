@@ -1399,6 +1399,42 @@ input[type="file"] {
   width: 0;
   height: 0;
 }
+input[type="email"] {
+  display: block;
+  text-indent: 5px;
+  width: 90%;
+  height: 30px;
+}
+input[type="email"] ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+input[type="email"] :-moz-placeholder {
+  color: #ffffff;
+}
+input[type="email"] ::-moz-placeholder {
+  color: #ffffff;
+}
+input[type="email"] :-ms-input-placeholder {
+  color: #ffffff;
+}
+input[type="password"] {
+  display: block;
+  text-indent: 5px;
+  width: 90%;
+  height: 30px;
+}
+input[type="password"] ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+input[type="password"] :-moz-placeholder {
+  color: #ffffff;
+}
+input[type="password"] ::-moz-placeholder {
+  color: #ffffff;
+}
+input[type="password"] :-ms-input-placeholder {
+  color: #ffffff;
+}
 textarea {
   color: #ffffff;
   resize: none;

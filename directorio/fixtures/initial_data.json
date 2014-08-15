@@ -465,16 +465,5 @@
             "person": 1,
             "permission": 1
         }
-    },
-
-    {
-    "model": "directorio.credential",
-        "pk": 28,
-        "fields": {
-            "person": 1,
-            "provider": "local",
-            "user": "kmkz",
-            "hashed_password": "kmkz2014"
-        }
     }
 ]

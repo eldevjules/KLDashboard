@@ -24,7 +24,7 @@
         <div class="grid-item desk-one-half">
 
           <div class="perfil">
-            <a href="{% url 'auth:logout' %}?next={{ request.path }}"><button class="boton">Cerrar sesión</button></a><img src="images/usuario.png" alt="{{ user.get_full_name|default:user.username }}" class="icon">
+            <a href="{% url 'auth:logout' %}?next={{ request.path }}"><button class="boton">Cerrar sesión</button></a><img ng-src="{[{ global.user.avatar }]}" alt="{{ user.get_full_name|default:user.username }}" class="icon">
           </div>
 
         </div>
@@ -36,16 +36,20 @@
     {% if user and not user.is_anonymous %}
     <div class="desk-one-fifth nav"><span class="hov"></span>
 
-      <div id="dashboard" class="nav-section">
-        <h2><i class="nav-icon dashboard"></i><a href="/" class="nav-link">Dashboard<i class="notificacion">1</i></a></h2>
-      </div>
-      <div id="directorio" class="nav-section">
-         <h2><i class="nav-icon directorio"></i><a href="" class="nav-link">Directorio</a></h2>
-         <div class="sub-links">
-           <a href="/directorio/#!/lista" title="Administrador">Listado</a>
-           <a href="/directorio/#!/admin" title="Administrador">Administrador</a>
-         </div>
-      </div>
+        <div id="dashboard" class="nav-section">
+            <h2><i class="nav-icon dashboard"></i><a href="/" class="nav-link">Dashboard<i class="notificacion">1</i></a></h2>
+        </div>
+        {% if "root" in permss or "direcotrio_consulta" in permss %}
+        <div id="directorio" class="nav-section">
+            <h2><i class="nav-icon directorio"></i><a href="" class="nav-link">Directorio</a></h2>
+            <div class="sub-links">
+                <a href="/directorio/#!/lista" title="Listado">Listado</a>
+                {% if "root" in permss or "directorio_admin" in permss %}
+                <a href="/directorio/#!/lista-admin" title="Administrador">Administrador</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
       <div id="ausencias" class="nav-section">
         <h2><i class="nav-icon ausencias"></i><a href="/proximamente" class="nav-link">Ausencias</a></h2>
         <div class="sub-links">
@@ -105,6 +109,10 @@
         </div><!-- End Main Content -->
 
     </div>
+
+    <script type="text/javascript">
+      window.user = {{usr|safe}};
+    </script>
 
     <!-- Import JavaScript Files -->
     <!-- Modernizr Basic Files -->

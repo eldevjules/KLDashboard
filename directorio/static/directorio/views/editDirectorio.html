@@ -3,7 +3,7 @@
 
         <div class="box-header">
             <div class="span icon-cat"><i class="box-icon admin"></i></div>
-            <h3>Administrador Directorio</h3>
+            <h3>Edición Kamikaze</h3>
         </div>
 
         <!-- box-body -->
@@ -17,9 +17,9 @@
                         <!-- contenedor-columna -->
                         <div class="contenedor-columna">
                             <label>Imagen*
-                                <input type="text" ng-model="usuario.avatar">
+                                <input type="text" ng-model="person.avatar">
                             </label>
-                            <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{usuario.avatar}]}">
+                            <img class="img-perfil" ng-src="../static/directorio/img/avatars/{[{person.avatar}]}">
                             <!-- <button type="button" class="boton file">Seleccionar archivo</button> -->
                         </div><!-- / contenedor-columna -->
 
@@ -27,19 +27,19 @@
                         <div class="contenedor-columna">
 
                             <label>Nombre*
-                                <input type="text" ng-model="usuario.first_name" ng-maxlength="30" required class="form-input">
+                                <input type="text" ng-model="person.names" ng-maxlength="30" required class="form-input">
                             </label>
         
                             <label>Apellido Materno*
-                                <input type="text" ng-model="usuario.maternal_last_name" required class="form-input">
+                                <input type="text" ng-model="person.maternal_surname" ng-maxlength="30" required class="form-input">
                             </label>
 
                             <p>Sexo*</p>
                             <label class="inline desk-one-third grid-item">Femenino
-                                <input type="radio" name="gender" ng-model="usuario.gender" value="F">
+                                <input type="radio" name="gender" ng-model="person.gender" value="femenino">
                             </label>
                             <label class="inline desk-one-third grid-item">Masculino
-                                <input type="radio" name="gender" ng-model="usuario.gender" value="M">
+                                <input type="radio" name="gender" ng-model="person.gender" value="masculino">
                             </label>
 
                         </div><!-- / contenedor-columna -->
@@ -48,7 +48,7 @@
                         <div class="contenedor-columna">
 
                             <label>Apellido Paterno*
-                                <input type="text" ng-model="usuario.last_name" required class="form-input">
+                                <input type="text" ng-model="person.paternal_surname" ng-maxlength="30" required class="form-input">
                             </label>
 
                             <label>Fecha de Nacimiento*</label>
@@ -70,11 +70,11 @@
                             </div>
 
                             <label>Twitter
-                                <input type="text" ng-model="usuario.twitter" class="form-input">
+                                <input type="text" ng-model="person.twitter" ng-maxlength="50" class="form-input">
                             </label>
 
                             <label>Tel&eacute;fono*
-                                <input type="text" ng-model="usuario.phone" required class="form-input">
+                                <input type="text" ng-model="person.phone" ng-maxlength="50" required class="form-input">
                             </label>
 
                         </div><!-- / contenedor-columna -->
@@ -85,15 +85,25 @@
                         <!-- contenedor-columna -->
                         <div class="contenedor-columna">
 
-                            <label>Puesto*
-                                <input type="text" ng-model="usuario.job" required class="form-input">
+                            <label>Empresa*</label>
+                            <div class="selector full">
+                                <select name="company" ng-model="person.company">
+                                    <option value="Laboratorio">Laboratorio</option>
+                                    <option value="Incubadora">Incubadora</option>
+                                    <option value="Tatami">Tatami</option>
+                                </select>
+                            </div>
+
+                            <label>Correo*
+                                <input type="email" ng-model="person.email" ng-maxlength="50" required class="form-input">
                             </label>
 
-                            <label>Correo*</label>
-                            <input type="email" ng-model="usuario.email" required class="form-input">
-
                             <label>ID Kamikaze*
-                                <input type="text" ng-model="usuario.kamikaze_number" required class="form-input">
+                                <input type="text" ng-model="person.kamikaze_number" ng-maxlength="50" required class="form-input">
+                            </label>
+
+                            <label>Jefe Directo*
+                                <input type="email" ng-model="person.boss" required class="form-input">
                             </label>
 
                         </div><!-- / contenedor-columna -->
@@ -101,8 +111,8 @@
                         <!-- contenedor-columna -->
                         <div class="contenedor-columna">
 
-                            <label>Area*
-                                <input type="text" ng-model="usuario.work_area" required class="form-input">
+                            <label>Puesto*
+                                <input type="text" ng-model="person.job" ng-maxlength="50" required class="form-input">
                             </label>
 
                             <label>Fecha de Ingreso*</label>
@@ -124,29 +134,27 @@
 
                             <p>Tiempo*</p>
                             <label class="inline desk-one-third grid-item">Completo
-                                <input type="radio" name="job_time" ng-model="usuario.job_time" value="completo">
+                                <input type="radio" name="job_time" ng-model="person.job_time" value="completo">
                             </label>
                             <label class="inline desk-one-third grid-item">Medio
-                                <input type="radio" name="job_time" ng-model="usuario.job_time" value="medio">
+                                <input type="radio" name="job_time" ng-model="person.job_time" value="medio">
                             </label>
 
                         </div><!-- / contenedor-columna -->
 
                         <!-- contenedor-columna -->
                         <div class="contenedor-columna">
-                            <label>Usuario*
-                                <input type="text" ng-model="usuario.username" required class="form-input">
-                            </label>
 
-                            <label>Jefe Directo*</label>
-                            <input type="email" ng-model="usuario.boss" required class="form-input">
+                            <label>Area*
+                                <input type="text" ng-model="person.area" ng-maxlength="50" required class="form-input">
+                            </label>
 
                             <p>Estado*</p>
                             <label class="inline desk-one-third grid-item">Activo
-                                <input type="radio" name="is_active" ng-model="usuario.is_active" value="1">
+                                <input type="radio" name="status" ng-model="person.status" value="activo">
                             </label>
                             <label class="inline desk-one-third grid-item">Inactivo
-                                <input type="radio" name="is_active" ng-model="usuario.is_active" value="0">
+                                <input type="radio" name="status" ng-model="person.status" value="inactivo">
                             </label>
 
                         </div><!-- / contenedor-columna -->
@@ -169,7 +177,46 @@
                             <button type="submit" class="submit boton"> Guardar </button>
                         </div><!-- / contenedor-columna -->
                     </div><!-- / contenedor-fila -->
+
+                    <!-- contenedor-fila -->
+                    <div class="contenedor-fila">
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                            <label>Roles</label>
+                            <div class="selector grid-item full">
+                                <select name="roles" ng-model="selectRoles" ng-change="agregaRol()"
+                                    ng-options="r as r.label for r in roles">
+                                </select>
+                            </div>
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                        </div><!-- / contenedor-columna -->
+
+                        <!-- contenedor-columna -->
+                        <div class="contenedor-columna">
+                        </div><!-- / contenedor-columna -->
+                    </div><!-- / contenedor-fila -->
                 </div><!-- / contenedor-tabla -->
+
+                <!-- contenedor-tabla -->
+                <div style="height: 500px;">
+                    <div ng-repeat="rol in personRols">
+                        <label>
+                            {[{ rol.label }]}
+                            <button type="button" ng-click="quitaRol( rol.value )">Quitar</button>
+                        </label>
+                        <div>
+                            <label ng-repeat="perm in rol.permissions">
+                                <input type="checkbox" name="{[{ rol.label }]}" value="{[{ perm.label }]}" ng-checked="{[{ perm.selected }]}" ng-click="asignaQuitaRol(rol.value,perm.id)">
+                                {[{ perm.label }]}
+                            </label>
+                        </div>
+                    </div>
+                </div><!-- / contenedor-tabla -->
+
+
             </form>
         </div><!-- / box-body -->
     </div>

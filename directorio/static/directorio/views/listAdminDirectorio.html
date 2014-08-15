@@ -31,22 +31,22 @@
             </thead>
 
             <tbody>
-                <tr ng-repeat="usuario in usuarios | filter:inputBuscaKamikaze">
+                <tr ng-repeat="usuario in usuariosAdmin | filter:inputBuscaKamikaze">
                     <td>
-                        <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{ usuario.avatar }]}" alt="{[{ usuario.first_name }]} {[{ usuario.last_name }]}">
+                        <img class="img-perfil" ng-src="../static/Directorio/img/avatars/{[{ usuario.avatar }]}" alt="{[{ usuario.names }]} {[{ usuario.paternal_surname }]}">
                     </td>
                     <td>
-                        <p>{[{ usuario.first_name }]} {[{ usuario.last_name }]}</p>
+                        <p>{[{ usuario.names }]} {[{ usuario.paternal_surname }]}</p>
                     </td>
                     <td> {[{ usuario.company }]} </td>
                     <td>
-                        <p class="departamento"> {[{ usuario.work_area }]} </p>
+                        <p class="departamento"> {[{ usuario.area }]} </p>
                     </td>
                     <td>
                         <p class="puesto"> {[{ usuario.job }]} </p>
                     </td>
                     <td>
-                        <a ng-href="#!/{[{ usuario.kamikaze_number }]}" class="boton">Editar</a>
+                        <a ng-href="#!/{[{ usuario.id }]}" class="boton">Editar</a>
                     </td>
                 </tr>
             </tbody>
