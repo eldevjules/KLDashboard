@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block styles_by_module %}
+    <link rel="stylesheet" type="text/css" href=" {%  static  "ausencias/css/ausenciasStyle.css" %} ">
+{% endblock styles_by_module %}
+
+{% block content %}
+
+    <!-- <section ng-view /> -->
+    <section ui-view />
+
+{% endblock content %}
+
+{% block scripts_by_module %}
+    <script type="text/javascript" src=" {%  static  "ausencias/js/config.js" %} "></script>
+    <script type="text/javascript" src=" {%  static  "ausencias/js/AusenciasAngularService.js" %} "></script>
+    <script type="text/javascript" src=" {%  static  "ausencias/js/AusenciasAngularController.js" %} "></script>
+{% endblock scripts_by_module %}

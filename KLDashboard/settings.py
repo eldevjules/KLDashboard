@@ -64,7 +64,7 @@ DATABASES = {
         'ENGINE':'django.db.backends.mysql',
         'NAME': 'KLDashboard',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'mseVerest76',
         'HOST': 'localhost',
     }
 }

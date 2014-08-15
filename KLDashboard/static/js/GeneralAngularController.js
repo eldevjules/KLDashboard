@@ -23,7 +23,7 @@ angular.module('KLDashboardClient.general').controller('GeneralAngularController
 
       var itemactivo = $('a.active');
       var th= itemactivo.closest('.nav-section');
-      th.height( ( ($(th).find(".sub-links a").length)*40 ) + 42 +"px" );
+      th.height( ( ($(th).find(".sub-links a").length)*38 ) + 42 +"px" );
       if($('a.active').parent().parent().parent().offset()){
         $('.hov').css({ top: $('a.active').parent().parent().offset().top - $('a.active').parent().parent().parent().offset().top });
       }
