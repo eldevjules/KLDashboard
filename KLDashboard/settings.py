@@ -90,6 +90,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'KLDashboard/static'),
+    os.path.join(BASE_DIR,'directorio/static'),
 )
 
 STATICFILES_FINDERS = (
@@ -128,12 +129,12 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.user.get_username',
     # 'directorio.pipelines.login.get_username',
     'directorio.pipeline.login.create_user',
+    'directorio.pipeline.login.user_dashboard',
 
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
     'social.pipeline.user.user_details',
 
-    'directorio.pipeline.login.create_user_dashboard',
 )
 
 LOGIN_URL          = '/'

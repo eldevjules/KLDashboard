@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('KLDashboardClient.general').controller('GeneralAngularController', ['$scope', '$rootScope', function ($scope, $rootScope) {
+angular.module('KLDashboardClient.general').controller('GeneralAngularController', ['$scope', '$rootScope', '$location', 'Global', function ($scope, $rootScope, $location, Global) {
 
-   $scope.dashboardModule = "";
-   $scope.activeItem = '';
+    $scope.global = Global;
+    $scope.dashboardModule = "";
+    $scope.activeItem = '';
 
     $rootScope.$on('$stateChangeStart',
     function(event, toState, toParams, fromState, fromParams){

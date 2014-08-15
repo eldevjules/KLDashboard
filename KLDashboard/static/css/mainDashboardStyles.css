@@ -1377,6 +1377,42 @@ input[type="file"] {
   width: 0;
   height: 0;
 }
+input[type="email"] {
+  display: block;
+  text-indent: 5px;
+  width: 90%;
+  height: 30px;
+}
+input[type="email"] ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+input[type="email"] :-moz-placeholder {
+  color: #ffffff;
+}
+input[type="email"] ::-moz-placeholder {
+  color: #ffffff;
+}
+input[type="email"] :-ms-input-placeholder {
+  color: #ffffff;
+}
+input[type="password"] {
+  display: block;
+  text-indent: 5px;
+  width: 90%;
+  height: 30px;
+}
+input[type="password"] ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+input[type="password"] :-moz-placeholder {
+  color: #ffffff;
+}
+input[type="password"] ::-moz-placeholder {
+  color: #ffffff;
+}
+input[type="password"] :-ms-input-placeholder {
+  color: #ffffff;
+}
 textarea {
   color: #ffffff;
   resize: none;
@@ -1414,7 +1450,7 @@ select option {
   width: 100px;
 }
 .selector.full {
-  width: 100%;
+  width: 240px;
 }
 .selector.last {
   margin-right: 0;
@@ -1665,7 +1701,11 @@ a {
   height: 18px;
   background-position: 0 -150px;
 }
-.nav-icon.fondo {
+.nav-icon.dojos {
+  height: 18px;
+  background: url(../img/icon_dojos.png) no-repeat;
+}
+.fondo {
   height: 17px;
   background-position: 0 -176px;
 }
@@ -1687,21 +1727,21 @@ a {
 @media only screen and (min-width:@portable-start) and (max-width:@tablet-start){
     .device-type(~"portable-");
     .contenedor{
-	width:100%;}
+  width:100%;}
     .boton{
-	padding:6px 5px;}
+  padding:6px 5px;}
     .nav-link{
-	text-indent:-9999px;}
+  text-indent:-9999px;}
     .sub-links{
-	padding-left:20px;
-	& a{
-	    font-size:8px;}}
+  padding-left:20px;
+  & a{
+      font-size:8px;}}
     .nav-icon{
-	left:inherit;
-	margin: 0 auto;
-	position:relative;}
+  left:inherit;
+  margin: 0 auto;
+  position:relative;}
     .nav-section:target{
-	height:230px;}
+  height:230px;}
 }*/
 /*------------------------------------*\
     TABLET
@@ -1709,10 +1749,10 @@ a {
 @media only screen and (min-width:@tablet-start) and (max-width:@desk-start){
     .device-type(~"tablet-");
     .contenedor{
-	width:100%;}
+  width:100%;}
     .nav-link{
-	padding: 19px 0;
-	font-size:16px;}
+  padding: 19px 0;
+  font-size:16px;}
 }*/
 /*------------------------------------*\
     DESKTOP
